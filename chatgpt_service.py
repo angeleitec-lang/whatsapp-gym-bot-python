@@ -1,8 +1,10 @@
 """
 ChatGPT Service for AI responses and client scoring
 """
-import openai
 import json
+
+import openai
+
 from config import Config
 from logger import get_logger
 

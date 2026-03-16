@@ -5,6 +5,7 @@ import logging
 import sys
 from datetime import datetime
 
+
 def get_logger(name: str, level=logging.INFO):
     """
     Get a configured logger instance.

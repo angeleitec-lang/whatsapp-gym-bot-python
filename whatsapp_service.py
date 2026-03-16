@@ -1,8 +1,10 @@
 """
 WhatsApp Service for sending and receiving messages
 """
-import requests
 import json
+
+import requests
+
 from config import Config
 from logger import get_logger
 

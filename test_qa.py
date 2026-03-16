@@ -2,7 +2,9 @@
 Unit tests for Q&A database
 """
 import pytest
-from qa_database import search_qa, get_qa_database, get_random_questions
+
+from qa_database import get_qa_database, get_random_questions, search_qa
+
 
 def test_qa_database_loaded():
     """Test that Q&A database loads correctly."""

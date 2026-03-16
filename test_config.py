@@ -1,9 +1,12 @@
 """
 Unit tests for configuration module
 """
-import pytest
 from unittest.mock import patch
+
+import pytest
+
 from config import Config, get_config
+
 
 def test_config_default_values():
     """Test default configuration values."""

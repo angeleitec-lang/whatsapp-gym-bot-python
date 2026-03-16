@@ -1,9 +1,12 @@
 """
 Unit tests for WhatsApp service
 """
+from unittest.mock import MagicMock, Mock, patch
+
 import pytest
-from unittest.mock import Mock, patch, MagicMock
+
 from whatsapp_service import WhatsAppService
+
 
 @pytest.fixture
 def mock_config():

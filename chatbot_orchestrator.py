@@ -4,12 +4,13 @@ Chatbot Orchestrator - Main logic for handling messages
 import threading
 import time
 from datetime import datetime, timedelta
-from qa_database import search_qa, get_qa_database
-from whatsapp_service import get_whatsapp_service
+
 from chatgpt_service import get_chatgpt_service
 from database_service import get_database_service
 from google_sheets_service import get_sheets_service
 from logger import get_logger
+from qa_database import get_qa_database, search_qa
+from whatsapp_service import get_whatsapp_service
 
 logger = get_logger(__name__)
 

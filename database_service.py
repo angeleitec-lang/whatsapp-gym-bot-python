@@ -1,9 +1,11 @@
 """
 Database Service for MySQL operations
 """
+from datetime import datetime
+
 import mysql.connector
 from mysql.connector import Error
-from datetime import datetime
+
 from config import Config
 from logger import get_logger
 
