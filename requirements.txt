@@ -26,6 +26,7 @@ pylint==3.0.3
 radon==6.0.1
 
 # Security scanning
+pbr==5.11.1
 bandit==1.7.5
 detect-secrets==1.4.0
 

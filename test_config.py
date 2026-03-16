@@ -16,7 +16,7 @@ def test_config_default_values():
     assert config.PORT == 3000
     assert config.TIMEOUT_MESSAGE_MINUTES == 1
 
-@patch.dict('os.environ', {
+@patch.dict('config.os.environ', {
     'NODE_ENV': 'production',
     'PORT': '8000',
     'WHATSAPP_PHONE_ID': 'test_phone_id',
@@ -41,7 +41,7 @@ def test_get_config_singleton():
     config = get_config()
     assert isinstance(config, Config)
 
-@patch.dict('os.environ', {
+@patch.dict('config.os.environ', {
     'DB_HOST': 'localhost',
     'DB_USER': 'root',
     'DB_PASS': 'password',
@@ -58,7 +58,7 @@ def test_database_config():
     assert config.DB_NAME == 'test_db'
     assert config.DB_PORT == 3307
 
-@patch.dict('os.environ', {
+@patch.dict('config.os.environ', {
     'GOOGLE_CLIENT_ID': 'test_client_id',
     'GOOGLE_CLIENT_SECRET': 'test_secret',
     'GOOGLE_SHEETS_ID': 'test_sheet_id'
@@ -71,7 +71,7 @@ def test_google_config():
     assert config.GOOGLE_CLIENT_SECRET == 'test_secret'
     assert config.GOOGLE_SHEETS_ID == 'test_sheet_id'
 
-@patch.dict('os.environ', {'OPENAI_API_KEY': 'test_openai_key'})
+@patch.dict('config.os.environ', {'OPENAI_API_KEY': 'test_openai_key'})
 def test_openai_config():
     """Test OpenAI configuration."""
     config = Config()
