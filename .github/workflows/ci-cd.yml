@@ -99,8 +99,11 @@ jobs:
       - name: Build distribution
         run: |
           mkdir -p dist
-          cp -r . dist/whatsapp-gym-bot-python/
-          ls -la dist/
+          cd dist
+          cp -r ../*.py .
+          cp ../requirements.txt .
+          cp -r ../.env.example . || true
+          ls -la
 
       - name: Verify application startup
         timeout-minutes: 2
