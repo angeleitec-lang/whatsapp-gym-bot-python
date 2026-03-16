@@ -31,7 +31,7 @@ def test_webhook_verify_invalid_token(client):
     
     assert response.status_code == 403
 
-@patch.dict('os.environ', {'WEBHOOK_VERIFY_TOKEN': 'test_token'})
+@patch('app.config.WEBHOOK_VERIFY_TOKEN', 'test_token')
 def test_webhook_verify_valid_token(client):
     """Test webhook verification with valid token."""
     response = client.get('/webhook?hub.mode=subscribe&hub.challenge=test_challenge&hub.verify_token=test_token')
@@ -107,7 +107,7 @@ def test_test_sheets_endpoint(mock_append, client):
     mock_append.return_value = True
     
     payload = {
-        'nombre': 'Juan',
+        'nome': 'Juan',
         'edad': 50,
         'score': 75,
         'categoria': 'Caliente'
